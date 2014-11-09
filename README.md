@@ -1,4 +1,4 @@
-lightblog
+LightBlog
 =========
 
 Light weight blog system, super simple, super functional. 
