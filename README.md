@@ -8,8 +8,8 @@ Uses PHP, and MySQL.
 Installation
 =========
 
-1. Firstly, you'll need to download the lightblog files, just click the 'Download Zip' on the side.<br><br>
-2. Next, upload the contents of the 'upload' folder in your web server and begin to open 'assets/config/config.php'.<br><br>
+1. Firstly, you'll need to download the lightblog files, just click the 'Download Zip' on the side.
+2. Next, upload the contents of the 'upload' folder in your web server and begin to open 'assets/config/config.php'.
 3. Upload the 'blog.sql' into your database.
 4. Edit your default theme, company name, title of the pages, base url, accounts, and database information.
 5. Create an Disqus account, and create a chat: https://disqus.com/websites/
