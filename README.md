@@ -27,6 +27,5 @@ That's why I uploaded it into github so fellow others can help out in the develo
 
 Also, this was made for a community which happens to speak only Portuguese so I tried my best to translate it from Portuguese to English
 
-### Header 3
+### Developed and worked on by:<br>
 VladR Studios and SEENKO.NET
----------------------
