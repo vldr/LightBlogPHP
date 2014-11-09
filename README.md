@@ -29,4 +29,4 @@ Also, this was made for a community which happens to speak only Portuguese so I 
 
 
 VladR Studios and SEENKO.NET
-=========
+---------------------
