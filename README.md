@@ -3,7 +3,6 @@ LightBlog
 
 Light weight blog system, super simple, super functional. 
 Uses PHP, and MySQL. <br>
-By: VladR and SEENKO.NET
 ![alt text](https://vladr.co.uk/img/presentation.png "Title")
 
 Why would I use this?
@@ -27,3 +26,7 @@ This isn't perfect. It was made by two guys who wanted some simple solution to a
 That's why I uploaded it into github so fellow others can help out in the development and work out some bugs/glitches/exploits.
 
 Also, this was made for a community which happens to speak only Portuguese so I tried my best to translate it from Portuguese to English
+
+
+VladR Studios and SEENKO.NET
+=========
