@@ -19,7 +19,7 @@ class CConfig{
 	static $accounts         = array("username" => "password", "username2" => "password2");
 	
 
-	static $apilock        	 = false;
+	static $apilock        	 = false; // Don't worry about this.
 
 	static $DBServer         = "localhost"; // The IP address of the database.
 	static $DBUser           = "root"; // The user of the database.
