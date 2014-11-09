@@ -56,7 +56,7 @@ if (!$validated) {
 	<div class="content">
 		<div class="topbar">
 				<ul class="topbar-ul">
-					<li class="topbar-li"><a href="../blog/">Return to Home</a></li>
+					<li class="topbar-li"><a href="../">Return to Home</a></li>
 				</ul>
 			</div>
 	
