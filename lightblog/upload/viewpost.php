@@ -9,8 +9,6 @@ $get = new get();
 <html lang="en">
 <head>
 	<meta CHARSET="UTF-8">
-	<meta NAME="description" CONTENT="Vlad's Blog is basically my home place to just chat with people and advertise my thoughts.">
-	<meta NAME="keywords" CONTENT="vladr, studios, blog">
 	<title><?php echo $config::$title; ?></title>
 	<link href=<?php echo '"' . $config::$baseurl . 'assets/themes/' . $config::$theme . '/style.css' . '"'; ?> rel="stylesheet" media="screen">
 </head>
