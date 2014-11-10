@@ -1,91 +1,60 @@
 <?php
-//Incluir a configuração default;
 require_once('config.php');
 
 class post{
-	//Função para pegar os posts da DB;
 	function sendPost(){
-		$config = new CConfig();
-		
-		//Cria uma nova conexão MySqli;
-		$conn = new mysqli($config::$DBServer, $config::$DBUser, $config::$DBPass, $config::$DBName);
+		try {
+			$config = new CConfig();
+			$conn = new PDO('mysql:host=' . $config::$DBServer . ';dbname=' . $config::$DBName . ';charset=utf8', $config::$DBUser, $config::$DBPass);
 
-		//Tenta conectar, caso contrário informe o erro;
-		if ($conn->connect_error) {
-		  trigger_error('A conexão com a database falhou: '  . $conn->connect_error, E_USER_ERROR);
-		}
-
-
-		$title = "'" . $conn->real_escape_string($_POST['title']) . "'";
-		$content = "'" . $conn->real_escape_string($_POST['content']) . "'";
-		$curdate = "'" . date('d') . "/" . date('m') . "/" . date('Y') . "'";
-		$author = "'" . $conn->real_escape_string($_POST['author']) . "'";
- 
-		$sql="INSERT INTO posts (title, content,postdate, author) VALUES ($title,$content,$curdate, $author)";
-		 
-		if($conn->query($sql) === false) {
-		  trigger_error('SQL Incorreto: ' . $sql . ' Erro: ' . $conn->error, E_USER_ERROR);
-		  echo "Ocorreu um erro ao enviar seu post! Tente novamente!";
-		} else {
-		  $last_inserted_id = $conn->insert_id;
-		  $affected_rows = $conn->affected_rows;
-		  header("Location: " . $config::$baseurl);
+			$curdate = date('d') . "/" . date('m') . "/" . date('Y');
+			
+			$stmt = $conn->prepare("INSERT INTO posts (title, content, postdate, author) VALUES (:title,:content,:curdate, :author)");
+			$stmt->execute(array(':title' => $_POST['title'], 
+			':content' => $_POST['content'], 
+			':curdate' => $curdate, 
+			':author' => $_POST['author']));
+			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			
+			header("Location: " . $config::$baseurl);
+			
+		} catch(PDOException $ex) {
+			echo "An error occurred!";
 		}
 	}
 
 	function updatePost(){
-		$config = new CConfig();
-		
-		//Cria uma nova conexão MySqli;
-		$conn = new mysqli($config::$DBServer, $config::$DBUser, $config::$DBPass, $config::$DBName);
+		try {
+			$config = new CConfig();
+			$conn = new PDO('mysql:host=' . $config::$DBServer . ';dbname=' . $config::$DBName . ';charset=utf8', $config::$DBUser, $config::$DBPass);
 
-		//Tenta conectar, caso contrário informe o erro;
-		if ($conn->connect_error) {
-		  trigger_error('A conexão com a database falhou: '  . $conn->connect_error, E_USER_ERROR);
-		}
-
-
-		$title = "'" . $conn->real_escape_string($_POST['title']) . "'";
-		$content = "'" . $conn->real_escape_string($_POST['content']) . "'";
-		$id = "'" . $_POST['pid'] . "'";
- 
-		$sql="UPDATE posts SET title=$title, content=$content WHERE id=$id";
-
-		if($conn->query($sql) === false) {
-		  trigger_error('SQL Incorreto: ' . $sql . ' Erro: ' . $conn->error, E_USER_ERROR);
-		  echo "Ocorreu um erro ao atualizar seu post! Tente novamente!";
-		} else {
-		  $last_inserted_id = $conn->insert_id;
-		  $affected_rows = $conn->affected_rows;
-		  header("Location: " . $config::$baseurl . "viewpost.php?id=" . $_POST['pid']);
+			$stmt = $conn->prepare("UPDATE posts SET title=:title, content=:content WHERE id=:id");
+			$stmt->execute(array(':title' => $_POST['title'], 
+			':content' => $_POST['content'], 
+			':id' => $_POST['pid']));
+			$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	 
+			header("Location: " . $config::$baseurl . "viewpost.php?id=" . $_POST['pid']);
+			
+		} catch(PDOException $ex) {
+			echo "An error occurred!";
 		}
 	}
 
 	function deletePost(){
-		$config = new CConfig();
+		try {
 		
-		//Cria uma nova conexão MySqli;
-		$conn = new mysqli($config::$DBServer, $config::$DBUser, $config::$DBPass, $config::$DBName);
+			$config = new CConfig();
+			$conn = new PDO('mysql:host=' . $config::$DBServer . ';dbname=' . $config::$DBName . ';charset=utf8', $config::$DBUser, $config::$DBPass);
 
-		//Tenta conectar, caso contrário informe o erro;
-		if ($conn->connect_error) {
-		  trigger_error('A conexão com a database falhou: '  . $conn->connect_error, E_USER_ERROR);
-		}
+			$stmt = $conn->prepare("DELETE FROM posts WHERE id=:id");
+			$stmt->bindValue(':id', $_POST['pid'], PDO::PARAM_STR);
+			$stmt->execute();
+			
 
-
-		$title = "'" . $conn->real_escape_string($_POST['title']) . "'";
-		$content = "'" . $conn->real_escape_string($_POST['content']) . "'";
-		$id = "'" . $_POST['pid'] . "'";
- 
-		$sql="DELETE FROM posts WHERE id=$id";
-
-		if($conn->query($sql) === false) {
-		  trigger_error('SQL Incorreto: ' . $sql . ' Erro: ' . $conn->error, E_USER_ERROR);
-		  echo "Ocorreu um erro ao atualizar seu post! Tente novamente!";
-		} else {
-		  $last_inserted_id = $conn->insert_id;
-		  $affected_rows = $conn->affected_rows;
-		  header("Location: " . $config::$baseurl);
+			  header("Location: " . $config::$baseurl);
+		} catch(PDOException $ex) {
+			echo "An error occurred!";
 		}
 	}
 }
