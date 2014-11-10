@@ -2,7 +2,7 @@ LightBlog
 =========
 
 Light weight blog system, super simple, super functional. 
-Uses PHP, and MySQL. <br>
+Uses PHP, and MySQL PDO. <br>
 ![alt text](https://vladr.co.uk/img/presentation.png "Title")
 
 Why would I use this?
