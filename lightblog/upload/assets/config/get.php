@@ -1,5 +1,4 @@
 <?php
-//Incluir a configuração default;
 require_once('config.php');
 require_once('nbbc.php');
 
@@ -50,8 +49,8 @@ class get{
 					</div><br>
 					<div class="postContent"><p>' . nl2br($bb->Parse($row['content'])) . '</p></div><br>
 					<div class="postFooter">
-						<a href="editpost.php?id=' . $_GET["id"] . '"><span class="editPostButton">Edit Post</span></a>
-						<a href="deletepost.php?id=' . $_GET["id"] . '"><span class="editPostButton">Delete Post</span></a>
+						<a href="editpost.php?id=' . $row['id'] . '"><span class="editPostButton">Edit Post</span></a>
+						<a href="deletepost.php?id=' . $row['id'] . '"><span class="editPostButton">Delete Post</span></a>
 						<span class="postAuthor">' . $row['author'] . '</span>
 						
 					</div>
