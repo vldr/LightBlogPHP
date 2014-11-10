@@ -29,7 +29,7 @@ The process is very simple:<br>
 
 Disclaimer
 =========
-This isn't perfect. It was made by two guys who wanted some simple solution to a problem.
+It was made by two guys for a community that wanted a blog system, we got some people who wanted the source code, and so we published it to github. <br>
 That's why I uploaded it into github so fellow others can help out in the development and work out some bugs/glitches/exploits.
 
 Also, this was made for a community which happens to speak only Portuguese so I tried my best to translate it from Portuguese to English
