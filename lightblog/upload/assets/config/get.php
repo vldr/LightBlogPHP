@@ -63,7 +63,7 @@ class get{
 		}
 
 		//Pre-definimos a seleção do conteúdo da tabela posts;
-		$sql='SELECT * FROM posts WHERE id="' . $id . '"';
+		$sql='SELECT * FROM posts WHERE id="' . mysql_escape_string($id) . '"';
 
 		//Conectamos e Selecionamos;
 		$rs=$conn->query($sql);
@@ -120,7 +120,7 @@ class get{
 		}
 
 		//Pre-definimos a seleção do conteúdo da tabela posts;
-		$sql='SELECT * FROM posts WHERE id="' . $id . '"';
+		$sql='SELECT * FROM posts WHERE id="' . mysql_escape_string($id) . '"';
 
 		//Conectamos e Selecionamos;
 		$rs=$conn->query($sql);
@@ -158,7 +158,7 @@ class get{
 		}
 
 		//Pre-definimos a seleção do conteúdo da tabela posts;
-		$sql='SELECT * FROM posts WHERE id="' . $id . '"';
+		$sql='SELECT * FROM posts WHERE id="' . mysql_escape_string($id) . '"';
 
 		//Conectamos e Selecionamos;
 		$rs=$conn->query($sql);
@@ -202,7 +202,7 @@ class get{
 		}
 
 		//Pre-definimos a seleção do conteúdo da tabela posts;
-		$sql='SELECT * FROM posts WHERE id="' . $id . '"';
+		$sql='SELECT * FROM posts WHERE id="' . mysql_escape_string($id) . '"';
 
 		//Conectamos e Selecionamos;
 		$rs=$conn->query($sql);
