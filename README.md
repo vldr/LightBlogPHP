@@ -22,10 +22,10 @@ Installation
 
 How to add a admin user?
 =========
-The process is very simple:
-1. Open up: 'assets/config/config.php'.
-2. Simply edit or add <code>, "username2" => "password2"</code> at the end of the array.
-3. Enjoy, theres also an example inside the file if you don't understand this.
+The process is very simple:<br>
+1. Open up: 'assets/config/config.php'.<br>
+2. Simply edit or add <code>, "username2" => "password2"</code> at the end of the array.<br>
+3. Enjoy, theres also an example inside the file if you don't understand this.<br>
 
 Disclaimer
 =========
