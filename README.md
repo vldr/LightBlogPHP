@@ -32,7 +32,6 @@ Disclaimer
 It was made by two guys for a community that wanted a blog system, we got some people who wanted the source code, and so we published it to github. <br>
 That's why I uploaded it into github so fellow others can help out in the development and work out some bugs/glitches/exploits.
 
-Also, this was made for a community which happens to speak only Portuguese so I tried my best to translate it from Portuguese to English
 <hr>
 ### Developed by:<br>
 VladR Studios and seenko.net
