@@ -13,7 +13,7 @@ Installation
 =========
 
 1. Firstly, you'll need to download the lightblog files, just click the 'Download Zip' on the side.
-2. Next, upload the contents of the 'upload' folder in your web server and begin to open 'assets/config/config.php'.
+2. Next, upload the contents of the 'upload' folder in your web server and begin to open <code>assets/config/config.php</code>.
 3. Upload the 'blog.sql' into your database.
 4. Edit your default theme, company name, title of the pages, base url, accounts, and database information.
 5. Create an Disqus account, and create a chat: https://disqus.com/websites/
@@ -23,7 +23,7 @@ Installation
 How to add a admin user?
 =========
 The process is very simple:<br>
-1. Open up: 'assets/config/config.php'.<br>
+1. Open up: <code>assets/config/config.php</code>.<br>
 2. Simply edit or add <code>, "username2" => "password2"</code> at the end of the array.<br>
 3. Enjoy, theres also an example inside the file if you don't understand this.<br>
 
