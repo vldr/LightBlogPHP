@@ -54,7 +54,7 @@ if(!isset($_GET['id'])){
 	}
 
 	.topbar-li a {
-		color:#1A99DB !important;
+		color:black !important;
 		text-decoration:underline !important;
 		font-family: 'Open Sans', sans-serif;
 	}

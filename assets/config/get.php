@@ -17,8 +17,8 @@ class get{
 					<div class="postHeader">
 						<a class="postTitle" href=' . 'viewpost.php?id=' . $row['id'] . '>' . $row['title'] . '</a>
 						<span class="postDate">' . $row['postdate'] . '</span>
-					</div><br>
-					<div class="postContent"><p>' . nl2br($bb->Parse($row['content'])) . '</p></div><br>
+					</div>
+					<div class="postContent"><p>' . nl2br($bb->Parse($row['content'])) . '</p></div>
 					<div class="postFooter">
 						<a href="createpost.php"><span class="editPostButton">Create Post</span></a>
 						<span class="postAuthor">' . $row['author'] . '</span>
@@ -46,8 +46,8 @@ class get{
 					<div class="postHeader">
 						<span class="postTitleOnPage">' . $row['title'] . '</span>
 						<span class="postDate">' . $row['postdate'] . '</span>
-					</div><br>
-					<div class="postContent"><p>' . nl2br($bb->Parse($row['content'])) . '</p></div><br>
+					</div>
+					<div class="postContent"><p>' . nl2br($bb->Parse($row['content'])) . '</p></div>
 					<div class="postFooter">
 						<a href="editpost.php?id=' . $row['id'] . '"><span class="editPostButton">Edit Post</span></a>
 						<a href="deletepost.php?id=' . $row['id'] . '"><span class="editPostButton">Delete Post</span></a>

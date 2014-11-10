@@ -23,6 +23,9 @@ if (!$validated) {
 	<title><?php echo $config::$title; ?> - Edit Post</title>
 	<link rel="shortcut icon" href=<?php echo '"' . $config::$baseurl . 'assets/themes/' . $config::$theme . '/images/favicon.ico?v=2' . '"'; ?> type="image/x-icon">
 	<link rel="icon" href=<?php echo '"' . $config::$baseurl . 'assets/themes/' . $config::$theme . '/images/favicon.ico?v=2' . '"'; ?> type="image/x-icon">
+	
+	<?php include("assets/config/sceditor.php"); ?>
+	
 	<style>
 	body {
 		font-family: 'Open Sans',sans-serif;
@@ -45,7 +48,7 @@ if (!$validated) {
 	}
 
 	.topbar-li a {
-		color:#1A99DB !important;
+		color:black !important;
 		text-decoration:underline !important;
 		font-family: 'Open Sans', sans-serif;
 	}
@@ -67,7 +70,7 @@ if (!$validated) {
 				<label class="newPostTitleTag">Title:</label><br><br>
 				<input class="newPostTitle" type="text" name="title" required /><br><br>
 				<label class="newPostContentTag">Content: </label><br><br>
-				<textarea class="newPostContent" name="content" required ></textarea><br><br>
+				<textarea class="newPostContent" name="content" style="width: 70%; height: 400px;" required ></textarea><br><br>
 				<label class="newPostAttTag">Author: </label><br><br>
 				<input class="newPostAtt" type="text" name="author" readonly="readonly" value=<?php echo "'" . $user . "'"; ?> /><br><br><br><br>
 				<input class="newPostSubmit" type="submit" value="Submit" />
