@@ -20,6 +20,13 @@ Installation
 6. Go to 'viewpost.php' and edit the 'CHANGETHIS_TO_YOUR_USERNAME' on line 35 to your Disqus username/chat.
 7. Finally you'll be able to blog and do whatever you want! Enjoy!
 
+How to add a admin user?
+=========
+The process is very simple:
+1. Open up: 'assets/config/config.php'.
+2. Simply edit or add <code>, "username2" => "password2"</code> at the end of the array.
+3. Enjoy, theres also an example inside the file if you don't understand this.
+
 Disclaimer
 =========
 This isn't perfect. It was made by two guys who wanted some simple solution to a problem.
