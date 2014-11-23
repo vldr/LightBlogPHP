@@ -7,7 +7,9 @@ Uses PHP, and MySQL PDO. <br>
 
 Why would I use this?
 =========
-Honestly, it's great. It's simple, it's easy to intergrate into any website. Plus it's great for people who want to learn web design and practice it at the same time, how so? Well you have a stylesheet and you have to use your skills to build off of the things that we're already given to you.
+It's light weight, simple, and functional. I'm not saying you should choose this over anything but, if you need something simple and something that functions, in that case this will be perfect for you! 
+
+You can get started easily but placing the all the files, configuring the information, and upload the SQL file.
 
 Installation
 =========
