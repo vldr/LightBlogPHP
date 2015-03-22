@@ -436,7 +436,7 @@ var $default_tag_rules = Array(
 //YouTube iFrame BBCode
 'vid' => Array(
 'mode' => BBCODE_MODE_ENHANCED,
-'template' => '<iframe width="{$width}" height="{$height}" src="//www.youtube.com/embed/{$_content}?rel=0" frameborder="0" allowfullscreen></iframe>',
+'template' => '<div style="position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0;"><iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" width="{$width}" height="{$height}" src="//www.youtube.com/embed/{$_content}?rel=0" frameborder="0" allowfullscreen></iframe></div>',
 'default' => Array('width' => '560', 'height' => '315'),
 'class' => 'block',
 'allow_in' => Array('listitem', 'block', 'columns', 'inline', 'link'),
