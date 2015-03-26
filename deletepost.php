@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
 require_once('assets/config/config.php');
 require_once('assets/config/get.php');
 $config = new CConfig();
