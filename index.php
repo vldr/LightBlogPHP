@@ -20,7 +20,7 @@ $get = new get();
 	                });
         	}
        
-        	CreateRedirectKey(219, 'https://vladr.co/blog/createpost.php');	
+        	CreateRedirectKey(219, String(window.location)+'createpost.php');	
 	</script>
 	
 </head>
