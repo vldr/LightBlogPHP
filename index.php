@@ -20,7 +20,7 @@ $get = new get();
 	                });
         	}
        
-        	CreateRedirectKey(219, String(window.location)+'createpost.php');	
+        	CreateRedirectKey(219, '<?php echo $config::$baseurl; ?>' + 'createpost.php');	
 	</script>
 	
 </head>
