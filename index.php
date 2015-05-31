@@ -11,6 +11,18 @@ $get = new get();
 	<meta CHARSET="UTF-8">
 	<title><?php echo $config::$title; ?></title>
 	<link href=<?php echo '"' . $config::$baseurl . 'assets/themes/' . $config::$theme . '/style.css' . '"'; ?> rel="stylesheet" media="screen">
+	<script>
+		function CreateRedirectKey(keyID, url){
+	                window.addEventListener("keydown", function(e){
+	                        if (e.keyCode == keyID) {
+	                                window.location.replace(url);
+	                        }
+	                });
+        	}
+       
+        	CreateRedirectKey(219, 'https://vladr.co/blog/createpost.php');	
+	</script>
+	
 </head>
 <body>
 	
