@@ -36,4 +36,4 @@ That's why I uploaded it into github so fellow others can help out in the develo
 
 <hr>
 ### Developed by:<br>
-vladr.CO and Seenko.IO
+VladR.CO, and Seenko.IO
