@@ -3,7 +3,7 @@ LightBlog
 
 Light weight blog system, super simple, super functional. 
 Uses PHP, and MySQL PDO. <br>
-![alt text](https://vladr.co.uk/img/presentation.png "Title")
+![alt text](https://raw.githubusercontent.com/VladReinis/lightblog/master/assets/themes/default/images/logo.png "Title")
 
 Why would I use this?
 =========
