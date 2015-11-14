@@ -37,4 +37,4 @@ That's why I uploaded it into github so fellow others can help out in the develo
 
 <hr>
 ### Developed by:<br>
-VladR.CO, and Seenko.IO
+vldr.xyz, and Seenko.IO
